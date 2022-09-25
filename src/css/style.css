@@ -222,12 +222,90 @@ body {
 
 .projects {
     grid-area: projects;
-    background-color: darkmagenta;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.projects img {
+    height: 100%;
+    transition: .3s;
+}
+
+.projects a:hover img {
+    opacity: 0.8;
+}
+
+@media(max-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 425px) {
+    .projects {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
 }
 
 /* FOOTER */
 
 .footer {
     grid-area: footer;
-    background-color: darkslategrey;
+    
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.footer h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: .2s;
+}
+
+.footer a:hover h4 {
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
+.footer nav {
+    margin: 50px 0;
+}
+
+.footer nav ul {
+    display: flex;
+    justify-content: center;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.footer nav ul li a {
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 20px;
+    transition: .3s;
+}
+
+.footer nav ul li a:hover {
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.footer .social i{
+    font-size: 2rem;
+    transition: .3s;
+}
+
+.footer .social a {
+    margin: 20px;
+}
+
+.footer .social a:hover {
+    color: #FFFFFF;
 }
